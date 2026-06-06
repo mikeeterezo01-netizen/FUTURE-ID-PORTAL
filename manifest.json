@@ -1,0 +1,16 @@
+{
+  "name": "EMPLOYEE IDENTIFICATION PORTAL",
+  "short_name": "ID Portal",
+  "start_url": "dashboard.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/912/912214.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
