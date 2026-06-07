@@ -371,10 +371,34 @@
                         <label for="office">Assigned Office / Department *</label>
                         <select id="office" required>
                             <option value="">-- Select Office --</option>
-                            <option value="Information Technology Office">Information Technology Office</option>
-                            <option value="Human Resource Division">Human Resource Division</option>
-                            <option value="Finance & Accounting Department">Finance & Accounting Department</option>
-                            <option value="Administrative Services">Administrative Services</option>
+                            <option value="Information Technology Office">Provincial Governor's Office</option>
+                            <option value="Human Resource Division">Provincial Human Resource Management and Development Office</option>
+                            <option value="Finance & Accounting Department">Provincial Budget Office</option>
+                            <option value="Administrative Services">Provincial Administrator's Office</option>
+                            <option value="Administrative Services">Provincial Accounting Office</option>
+                            <option value="Administrative Services">Provincial Treasurer's Office</option>
+                            <option value="Administrative Services">Provincial Planning and Development Office</option>
+                            <option value="Administrative Services">Provincial Assessor's Office</option>
+                            <option value="Administrative Services">Provincial Engineering Office</option>
+                            <option value="Administrative Services">Provincial General and Services Office</option>
+                            <option value="Administrative Services">Provincial Entreprenure Enterprise Development and Management Office</option>
+                            <option value="Administrative Services">Provincial Environment and Natural Resources Office</option>
+                            <option value="Administrative Services">Provincial Disaster Risk and Reduction Management Office</option>
+                            <option value="Administrative Services">PGO-Civil Security Unit</option>
+                            <option value="Administrative Services">Provincial Legal Office</option>
+                            <option value="Administrative Services">Provincial Information and Coomunications Technology Office</option>
+                            <option value="Administrative Services">PPSO</option>
+                            <option value="Administrative Services">Provincial Health Office</option>
+                            <option value="Administrative Services">Provincial Vice Governor's Office</option>
+                            <option value="Administrative Services">Sangguniang Panlalawigan</option>
+                            <option value="Administrative Services">Office of Secretary to the Sangguniang Panlalawigan</option>
+                            <option value="Administrative Services">Gigaquit Ambulatory and Surgical Clinic</option>
+                            <option value="Administrative Services">Surigao Del Norte Provincial Hospital</option>
+                            <option value="Administrative Services">Pilar District Hospital</option>
+                            <option value="Administrative Services">Malimono District Hospital</option>
+                            <option value="Administrative Services">Del Carmen District Hospital/option>
+                            <option value="Administrative Services">Socorro District Hospital</option>
+                            <option value="Administrative Services">Mainit District Hosptal</option>
                         </select>
                     </div>
 
@@ -400,12 +424,12 @@
 
                     <div class="form-group">
                         <label for="tin">TIN (Tax ID Number) *</label>
-                        <input type="text" id="tin" placeholder="000-000-000" required>
+                        <input type="text" id="tin" placeholder="N/A">
                     </div>
 
                     <div class="form-group">
                         <label for="gsis">GSIS BP Number *</label>
-                        <input type="text" id="gsis" placeholder="10 digits" required>
+                        <input type="text" id="gsis" placeholder="N/A">
                     </div>
 
                     <div class="form-group">
@@ -414,7 +438,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="emergencyContact">Emergency Contact (Phone) *</label>
+                        <label for="emergencyContact">Emergency Contact (Person) *</label>
                         <input type="text" id="emergencyContact" placeholder="e.g. 0917-000-0000" required>
                     </div>
 
@@ -574,8 +598,15 @@
                         <div class="detail-item"><strong>Blood Type:</strong> <span>${emp.bloodType}</span></div>
                         <div class="detail-item"><strong>Height:</strong> <span>${emp.height}</span> IN</div>
                         <div class="detail-item"><strong>Weight:</strong> <span>${emp.weight}</span> KG</div>
-                        <div class="detail-item"><strong>TIN:</strong> <span>${emp.tin}</span></div>
-                        <div class="detail-item"><strong>GSIS:</strong> <span>${emp.gsis}</span></div>
+
+                        <div class="detail-item" style="${(!emp.tin || emp.tin.trim() == '' emp.tin.toUpperCae() == 'NONE' || emp.tin === 'N/A') ? 'display: none;' : ''}">
+                        <div class="detail-item"><strong>TIN:</strong> <span>${emp.tin}</span>
+                        </div>
+
+                        <div class="detail-item" style="${(!emp.gsis || emp.gsis.trim() == '' emp.gsis.toUpperCae() == 'NONE' || emp.gsis === 'N/A') ? 'display: none;' : ''}">
+                        <div class="detail-item"><strong>GSIS:</strong> <span>${emp.gsis}</span>
+                        </div>
+                        
                         <div class="detail-item"><strong>Telephone:</strong> <span>${emp.telephone}</span></div>
                         <div class="detail-item"><strong>Emergency:</strong> <span>${emp.emergencyContact}</span></div>
                         <div class="detail-item full-width-detail"><strong>Address:</strong> <span>${emp.address}</span></div>
